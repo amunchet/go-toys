@@ -6,6 +6,8 @@
 
 ## Learning Go - Toy Programs
 
+There are a total of 75
+
 ## Resources
 - https://docs.google.com/document/d/1EZuT8ce69kthKzr3oUcX4HhAIRcYQCJUKsA3HiqMuYA/edit#
 - https://tour.golang.org/list
