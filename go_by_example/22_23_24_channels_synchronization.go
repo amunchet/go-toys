@@ -15,7 +15,14 @@ func worker (done chan bool){
 }
 
 // Channel directions
+func ping(pings chan<-string, msg string){
+	pings <- msg
+}
 
+func pong(pings <- chan string, pongs chan <- string){
+	msg:=<-pings
+	pongs <- msg
+}
 
 func main() {
 	msg := make(chan string, 10)
@@ -41,5 +48,12 @@ go worker(done)
 
 <- done
 
+// Channel Directions
+pings := make(chan string,1)
+pongs := make(chan string,1)
+
+ping(pings, "hello there")
+pong(pings, pongs)
+fmt.Println(<-pongs)
 
 }
