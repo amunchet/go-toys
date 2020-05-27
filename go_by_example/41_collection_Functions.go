@@ -2,14 +2,16 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
+// Making my own type
+
+type MyString [] string
 
 // Searches through the string for t.  Returns position or -1 if not found
 
-func Index(vs [] string, t string) int{
-	for i,v := range vs{
+func (s MyString) Index(t string) int{
+	for i,v := range s{
 		if v == t{
 			return i
 		}
@@ -18,3 +20,10 @@ func Index(vs [] string, t string) int{
 }
 
 //
+
+func main(){
+	var a = MyString{"test", "yes", "meow"}
+	fmt.Println(a.Index("test"))
+	fmt.Println(a.Index("yes"))
+	fmt.Println(a.Index("pet"))
+}
