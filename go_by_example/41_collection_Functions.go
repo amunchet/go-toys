@@ -19,7 +19,27 @@ func (s MyString) Index(t string) int{
 	return -1
 }
 
-//
+// Include 
+func (s MyString) Include(t string) bool{
+	return s.Index(t) >= 0
+}
+
+// Any
+
+func (s MyString) Any (f func(string) bool) bool{
+	for _, v := range s{
+		if f(v){
+			return true
+		}
+	}
+	return false
+}
+
+// All
+
+// Filter
+
+// Map
 
 func main(){
 	var a = MyString{"test", "yes", "meow"}
