@@ -30,8 +30,8 @@ jobs:
             dep ensure
         fi
 
-    - name: Build
-      run: go build -v .
+    - name: Run test.sh
+      run: ./test.sh
 
-    - name: Test
-      run: go test -v .
+    - name: Go testing
+      run: cd ./go_by_example/testing && go test -v .
