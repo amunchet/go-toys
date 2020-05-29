@@ -1,5 +1,9 @@
-# go-toys
-![Go](https://github.com/amunchet/go-toys/workflows/Go/badge.svg)
+# Go Toys
+![Go Tests](https://github.com/amunchet/go-toys/workflows/Go%20Tests/badge.svg)
+
+## Summary
+Yet another repository of someone learning go
+
 ## Commands
 - `go run [name]` - Run the go src file
 - `go build [name]` - Compiles the go src file to a binary
