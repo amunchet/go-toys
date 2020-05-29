@@ -27,3 +27,17 @@ jobs:
 
     - name: Go testing
       run: cd ./go_by_example/testing && go test -v .
+
+    - name: Git Config
+      run: git pull && git config --local user.email "data@altamontco.com" && git config --local user.name "Automatic Linting"
+      
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    
+    - name: Commit updated files
+      run: git commit -m "Automatic README badge update" -a || true
+        
+    - name: Push changes
+      run: git push

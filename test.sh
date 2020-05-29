@@ -43,7 +43,7 @@ for dir in $DIRS; do
             git commit -m "docs: automatic update to badge"
             git push
 
-            exit 1;
+            exit 0;
         fi
         COUNT=`expr $COUNT + 1`
     done
