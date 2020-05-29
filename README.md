@@ -1,5 +1,5 @@
 # Go Toys
-![Go Tests](https://github.com/amunchet/go-toys/workflows/Go%20Tests/badge.svg)
+![Go Tests](https://github.com/amunchet/go-toys/workflows/Go%20Tests/badge.svg?branch=master)
 
 ## Summary
 Yet another repository of someone learning go
