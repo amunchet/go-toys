@@ -1,5 +1,5 @@
 # go-toys
-![Go](https://github.com/amunchet/go-toys/workflows/Go/badge.svg)
+![Go](https://img.shields.io/badge/Go%20Examples%20Working-XXXXXX%2FYYYYYY-red)
 ## Commands
 - `go run [name]` - Run the go src file
 - `go build [name]` - Compiles the go src file to a binary
