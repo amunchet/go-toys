@@ -39,10 +39,11 @@ for dir in $DIRS; do
 
             sed "s/^\!\[Go\].*$/![Go]($IMG_URL$COUNT%2F$TOTAL-$COLOR)/g" README.md > temp.md
 
+            FILE=`echo $fname | sed 's/\//-/g' `
             
-            sed "s/^\!\[Example\].*$/![Example]($EXAMPLE_URL$fname-red)/g" temp.md > README.md
+            sed "s/^\!\[Example\].*$/![Example]($EXAMPLE_URL$FILE-red)/g" temp.md > README.md
 
-
+            rm temp.md
 
             git add README.md
             git commit -m "docs: automatic update to badge"
@@ -60,6 +61,7 @@ sed "s/^\!\[Go\].*$/![Go]($IMG_URL$COUNT%2F$COUNT-green)/g" README.md > temp.md
 
 sed "s/^\!\[Example\].*$/![Example]($EXAMPLE_URL$NONE-green)/g" temp.md > README.md
 
+rm temp.md
 
 git add README.md
 git commit -m "docs: automatic update to badge"
