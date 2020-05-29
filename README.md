@@ -1,5 +1,6 @@
 # Go Toys
 ![Go](https://img.shields.io/badge/Go%20Examples%20Working-34%2F76-red)
+![Example](https://img.shields.io/badge/Failing%20Example-adsfasdf-red)
 
 ## Summary
 Yet another repository of someone learning go
