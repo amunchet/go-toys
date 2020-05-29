@@ -1,5 +1,5 @@
 # Go Toys
-![Go](https://img.shields.io/badge/Go%20Examples%20Working-34%2F76-red)
+![Go](https://img.shields.io/badge/Go%20Examples%20Working-35%2F77-red)
 ![Example](https://img.shields.io/badge/Failing%20Example-go_by_example--39_panic.go-red)
 
 ## Summary
