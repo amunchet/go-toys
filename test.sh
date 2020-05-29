@@ -8,6 +8,10 @@ COUNT=0
 IMG_URL="https:\/\/img.shields.io\/badge\/Go%20Examples%20Working-"
 COLOR="red"
 
+
+git config --global user.email "data@altamontco.com"
+git config --global user.name "Automatic Linting"
+
 for dir in $DIRS; do
     echo "TOTAL FOUND: $TOTAL"
     for fname in $dir/*.go; do
