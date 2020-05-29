@@ -6,6 +6,8 @@ DIRS=`ls -d */`
 TOTAL=`find | grep .go | wc | awk ' { print $1 } '`
 COUNT=0
 IMG_URL="https:\/\/img.shields.io\/badge\/Go%20Examples%20Working-"
+EXAMPLE_URL="https:\/\/img.shields.io\/badge\/Failing%20Example-"
+NONE="None"
 COLOR="red"
 
 
@@ -38,6 +40,11 @@ for dir in $DIRS; do
             sed "s/^\!\[Go\].*$/![Go]($IMG_URL$COUNT%2F$TOTAL-$COLOR)/g" README.md > temp.md
 
             mv temp.md README.md
+            
+            sed "s/^\!\[Example\].*$/![Example]($EXAMPLE_URL$fname-red)/g" README.md > temp.md
+
+            mv temp.md README.md
+
 
             git add .
             git commit -m "docs: automatic update to badge"
@@ -55,6 +62,9 @@ sed "s/^\!\[Go\].*$/![Go]($IMG_URL$COUNT%2F$COUNT-green)/g" README.md > temp.md
 
 mv temp.md README.md
 
+sed "s/^\!\[Example\].*$/![Example]($EXAMPLE_URL$NONE-green)/g" README.md > temp.md
+
+mv temp.md README.md
 
 git add .
 git commit -m "docs: automatic update to badge"
