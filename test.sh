@@ -44,7 +44,7 @@ for dir in $DIRS; do
 
 
 
-            git add .
+            git add README.md
             git commit -m "docs: automatic update to badge"
             git push
 
@@ -61,7 +61,7 @@ sed "s/^\!\[Go\].*$/![Go]($IMG_URL$COUNT%2F$COUNT-green)/g" README.md > temp.md
 sed "s/^\!\[Example\].*$/![Example]($EXAMPLE_URL$NONE-green)/g" temp.md > README.md
 
 
-git add .
+git add README.md
 git commit -m "docs: automatic update to badge"
 git push
 
